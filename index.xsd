@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:shema xmlns:xsd="http://www.3w.org/2000/10/XML-SHEMA">
+   <xsd:element name="cours" type="courType">
+       <xsd:complexType 
+   </xsd:element>
+
+</xsd:shema>

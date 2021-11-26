@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE department SYSTEM "index.dtd">
+
+<department>
+    <Les_cours>   
+        <cours code_cours="4541A" code_salle="f5424" heure=".." date=".." duree="..">
+            <nom_cours>nom</nom_cours>
+            <description>decrire le cours</description>
+            <nombre-ECT>5</nombre-ECT>  
+    
+        </cours>
+    </Les_cours>  
+    
+    <Les_salles>
+        <salle code_salle="f5424" localisation="tunis" code_cours="4541A">
+            <salleInfo nbr_ordinateurs="100"  heure=".." date=".." duree="..">
+                
+            </salleInfo>
+            <auditoire nbr_place="100"  heure=".." date=".." duree=".." >
+
+            </auditoire>  
+        </salle>
+    <Les_salles>  
+
+</department>
