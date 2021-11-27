@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:shema xmlns:xsd="http://www.3w.org/2000/10/XML-SHEMA">
+
+    <xsd:element name="cours" type="coursType">
+      <xsd:complexType name="coursType">
+          <xsd:SEQUENCE>
+            <xsd:element name="nom_cours" type="xs:string"/>
+            <xsd:element name="description" type="xs:string"/>
+            <xsd:element name="nombre_ECT" type="xs:string"/>
+            <xsd:element name="occupation">
+              <xsd:complexType>
+                <xsd:SEQUENCE>
+                  <xsd:element name="date" type="xs:date"/>
+                  <xsd:element name="heure" type="xs:positiveInteger"/>
+                  <xsd:element name="duree" type="xs:positiveInteger"/>
+                </xsd:SEQUENCE> 
+              </xsd:complexType>
+            </xsd:element>  
+            <xsd:attributGroup>
+                <xsd:attribut name='code_cours' type="xsd:string" use="required"></xsd:attribut>
+                <xsd:attribut name='code_salle' type="xsd:string" use="required"></xsd:attribut>
+            </xsd:attributGroup>  
+          </xsd:SEQUENCE>
+          
+        </xsd:complexType>
+    </xsd:element>
+
+
+
+    <xsd:element name="salle" type="salleType">
+      <xsd:complexType name="salleType">
+        <xsd:CHOICE>
+
+          <xsd:element name="salleInfo" type="fullInfoType"/>
+            <xsd:complexType name="fullInfoType">
+              <xsd:complexContent>
+                <xsd:extension base="InfoType">
+                  <xsd:SEQUENCE>
+                    <xsd:element name="nbr_ordinateurs" type="xs:positiveInteger"/>  
+                  </xsd:SEQUENCE> 
+                </xsd:extension>                  
+              </xsd:complexContent>  
+            </xsd:complexType>    
+            <xsd:complexType name="InfoType">
+              <xsd:element name="localisation" type="xsd:string"/>
+              <xsd:element name="les_cours" type="les_coursType">
+                <xsd:complexType name="les_coursType">
+                  <xsd:SEQUENCE>
+                    <xsd:element name="cours" type="coursType" minOccurs="0" maxOccurs="unbounded"/>
+                  </xsd:SEQUENCE >   
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:complexType>
+            <xsd:attribut name='code_salle' type="xsd:string" use="required"></xsd:attribut>
+        </xsd:element>
+
+        <xsd:element name="auditoire" type="auditaireType" >
+            <xsd:complexType name="auditaireType">
+              <xsd:complexContent>
+                <xsd:extension base="InfoType">
+                  <xsd:SEQUENCE>
+                    <xsd:element name="nbr_places" type="xs:positiveInteger"/>  
+                  </xsd:SEQUENCE> 
+                </xsd:extension>                  
+              </xsd:complexContent>  
+            </xsd:complexType> 
+            <xsd:attribut name='code_salle' type="xsd:string" use="required"></xsd:attribut>
+        </xsd:element>   
+
+        </xsd:CHOICE>
+      </xsd:complexType>
+    </xsd:element>  
+
+</xsd:shema>

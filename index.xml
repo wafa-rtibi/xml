@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xml" href="index.xsl"?>
+<repertoire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="index.xsd"> 
+
+<!DOCTYPE department SYSTEM "index.dtd">
+
+<department>
+
+        <cours code_cours="4541A" code_salle="f5424" >
+            <nom_cours>nom</nom_cours>
+            <description>decrire le cours</description>
+            <nombre-ECT>5</nombre-ECT> 
+            <occupation>
+                <date></date>
+                <heure></heure>
+                <duree></duree> 
+            </occupation>
+        </cours>
+    
+    
+        <salle>
+
+            <salleInfo code_salle="f5424" >
+                <localisation></localisation>
+                <nbr_ordinateurs></nbr_ordinateurs>
+                <les_cours>
+                    <cours></cours>
+                </les_cours> 
+            </salleInfo>
+
+            <auditoire code_salle="f5424" >
+                <localisation></localisation>
+                <nbr_place></nbr_place>
+                <les_cours>
+                    <cours></cours>
+                </les_cours>    
+            </auditoire>  
+
+        </salle>
+
+
+</department>

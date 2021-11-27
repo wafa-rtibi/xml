@@ -1,0 +1,37 @@
+<!ELEMENT department (cours,salles+)*>
+
+
+    <!ELEMENT cours (nom_cours,description?,nombre-ECT?,occupation)>
+    <!ATTLIST cours code_cours ID #FIXED code_salle IDREF #REQUIRED >
+        <!ELEMENT nom_cours (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT nombre-ECT (#PCDATA)>
+        <!ELEMENT occupation (date,heure,duree)>
+            <!ELEMENT date (#PCDATA)>
+            <!ELEMENT heure (#PCDATA)>
+            <!ELEMENT duree (#PCDATA)>
+
+
+    <!ELEMENT salle (salleInfo|auditoire)+>
+        <!ELEMENT salleInfo(localisation,nbr_ordinateurs,les_cours) >
+        <!ATTLIST salleInfo code_salle ID #FIXED >
+            <!ELEMENT localisation (#PCDATA)>
+            <!ELEMENT nbr_ordinateurs (#PCDATA)>
+            <!ELEMENT les_cours(cours)*>
+
+            
+        <!ELEMENT auditoire(localisation,nbr_place,les_cours)>
+        <!ATTLIST auditoire code_salle ID #FIXED >
+            <!ELEMENT localisation (#PCDATA)>
+            <!ELEMENT nbr_place (#PCDATA)>
+            <!ELEMENT les_cours(cours)*>
+        
+        
+
+
+
+
+        
+    
+
+    
